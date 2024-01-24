@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const pathTxtFile = path.join(__dirname, 'secret-folder');
+
+
 fs.readdir(pathTxtFile, { withFileTypes: true }, (err, files) => {
   files.forEach((file) => {
     let fileName = path.basename(file.name, path.extname(file.name));
